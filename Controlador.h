@@ -26,3 +26,18 @@ string&& input(string label) {
  return move(value);
 }
 */
+class Menu {
+   TipoEntero opcion;
+   Tierra tierra;
+   void imprimirMenu();
+   void seleccionarOpcion();
+   void agregarObjeto();
+   void removerObjeto();
+   void dibujarMapa();
+public:
+   Menu(): opcion{} {}
+   void ejecutar();
+};
+
+#endif //AGREGACION_MENU_H
+
