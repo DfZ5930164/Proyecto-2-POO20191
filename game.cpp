@@ -1,7 +1,13 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-
+#include "Menu.h"
 using namespace std;
+
+
+
+int main() {
+
+
 
 void tablero_ingles(int m,int n, int cont_separador_vertical1, int cont_separador_vertical2, int cont_separador_vertical3  ){
     int contador_para_ganar=1;
@@ -490,6 +496,8 @@ void tablero_aleman(int m,int n, int cont_separador_vertical1, int cont_separado
 
 
 int main(){
+       Menu menu;
+    menu.ejecutar();
     int cont_separador_vertical1;
     int cont_separador_vertical2;
     int cont_separador_vertical3;
