@@ -69,4 +69,27 @@ void Menu::dibujarMapa() {
    cout << '\n';
    esperar();
 }
+void Menu::ejecutar() {
+   do {
+       imprimirMenu();
+       cin >> opcion;
+       seleccionarOpcion();
+   } while (opcion != 0);
+   cout << "Fin del programa...\n";
+}
+
+void Menu::seleccionarOpcion() {
+   limpiar();
+   switch(Opciones(opcion)) {
+     case Opciones::Agregar:  // Agregar Objeto
+           agregarObjeto();
+           break;
+     case Opciones::Remover:  // Remover Objeto
+           removerObjeto();
+           break;
+     case  Opciones::Mostrar: // Dibujando Tierra
+           dibujarMapa();
+           break;
+   }
+}
 
